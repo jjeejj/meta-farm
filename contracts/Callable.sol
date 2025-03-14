@@ -14,6 +14,7 @@ contract Callable is Ownable {
     }
 
     function setCaller(address _caller) external onlyOwner {
+        require(_caller != address(0), "Invalid caller address");
         caller = _caller;
     }
 }

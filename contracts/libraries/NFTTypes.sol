@@ -25,7 +25,7 @@ struct TokenInfo {
     uint256 level;
 }
 
-// NFT 信息
+// NFT 信息, 每种类型的 nft 有多少个
 struct NFTTypeInfo {
     NFTTypes.NFTType nftType;
     TokenInfo[] tokenInfos;
