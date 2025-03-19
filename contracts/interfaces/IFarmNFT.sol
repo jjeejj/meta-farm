@@ -5,7 +5,7 @@ import "../libraries/NFTTypes.sol";
 
 interface IFarmNFT {
     // 铸造 nft ,返回 nft 的 tokenId
-    function mint(address recient, string memory tokenURI, NFTTypes.NFTType nftType) external returns (uint256);
+    function mint(address recient, string calldata tokenURI, NFTTypes.NFTType nftType) external returns (uint256);
     function upgrade(uint256 tokenId) external;
     function setNftStatus(uint256 tokenId, bool status) external;
     function getNftAttributes(uint256 tokenId) external view returns (NFTTypes.NFTAttributes memory);
